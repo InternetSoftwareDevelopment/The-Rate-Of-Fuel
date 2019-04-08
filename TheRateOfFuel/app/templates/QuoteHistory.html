@@ -1,0 +1,22 @@
+{% extends "template.html" %}
+{% block content %}
+    {% for quote in quotes %}
+        <div class="content-section">
+            <div class="media-body">
+                <legend class="border-bottom mb-4">Quote History - {{ quote.requestDate }}</legend>
+                <p class="account-heading"><b>GALLONS REQUESTED:</b> {{ quote.gallonsRequested }}</p>
+                <p class="account-heading"><b>REQUEST DATE:</b> {{ quote.requestDate }}</p>
+                <p class="account-heading"><b>DELIVERY DATE:</b> {{ quote.deliveryDate }}</p>
+                <p class="account-heading"><b>ADDRESS:</b>{{ quote.address }}</p>
+                <p class="account-heading"><b>CITY:</b>{{ quote.city }}</p>
+                <p class="account-heading"><b>STATE:</b>{{ quote.state }}</p>
+                <p class="account-heading"><b>ZIP:</b>{{ quote.zip }}</p>
+                <p class="account-heading"><b>NAME:</b>{{ quote.name }}</p>
+                <p class="account-heading"><b>PHONE:</b>{{ quote.phone }}</p>
+                <p class="account-heading"><b>EMAIL:</b>{{ quote.email }}</p>
+                <p class="account-heading"><b>SUGGESTED PRICE:</b>{{ quote.suggestedPrice }}</p>
+                <p class="account-heading"><b>TOTAL DUE:</b>{{ quote.totalAmountDue }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content %}
